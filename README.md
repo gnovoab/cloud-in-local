@@ -7,7 +7,7 @@ This project is a **Docker Compose** file that contains [Eureka](https://bitbuck
 
 
 ###Instalation
-1. git clone https://{your_user}@bitbucket.org/spacebarmediadev/cloud-in-local.git
+1. git clone https://github.com/gnovoab/cloud-in-local.git
 2. cd cloud-in-local
 3. docker-compose up
 4. if it desired to run it by parts:
@@ -19,7 +19,6 @@ This project is a **Docker Compose** file that contains [Eureka](https://bitbuck
 * Eureka: [http://localhost:8761](http://localhost:8761)
 * Admin: [http://localhost:7500](http://localhost:7500)
 * PostgreSQL DB [http://localhost:5432](http://localhost:5432)
-* DynamoDB DB [http://localhost:8000/shell/](http://localhost:8000/shell/)
 
 
 ###Create PostgreSQL DB's

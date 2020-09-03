@@ -2,13 +2,17 @@
 version: '3'
 services:
 
-    config-server:
-        container_name: config-server
+    config-service:
+        container_name: config-service
         image: "gnovoab/config-service"
         ports:
             - "8888:8888"
+        environment:
+            - "SPRING_PROFILES_ACTIVE=docker"
+        depends_on:
+                - discovery-service
 
-    eureka-service:
+    discovery-service:
         container_name: discovery-service
         image: "gnovoab/discovery-service"
         ports:
@@ -26,9 +30,6 @@ services:
         environment:
             POSTGRES_USER: postgres
             POSTGRES_PASSWORD: postgres
-
-
-
 
 
 

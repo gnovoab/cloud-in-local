@@ -3,7 +3,7 @@
 
 ## Spring Cloud Setup
 
-This project is a **Docker Compose** file that contains [Eureka](https://github.com/gnovoab/discovery-service), [Config Server](https://github.com/gnovoab/config-service) [Api Gateway](https://github.com/gnovoab/api-gateway) and [Admin Service](https://github.com/gnovoab/admin-service) components with a **PostgreSQL DB**, ready to be integrate with any microservice implemented locally
+This project is a **Docker Compose** file that contains [Eureka](https://github.com/gnovoab/discovery-service), [Config Server](https://github.com/gnovoab/config-service), [Api Gateway](https://github.com/gnovoab/api-gateway), and [Admin Service](https://github.com/gnovoab/admin-service) components with a **PostgreSQL DB**, ready to be integrate with any microservice implemented locally
 
 
 ###Instalation

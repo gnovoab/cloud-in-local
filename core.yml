@@ -1,0 +1,41 @@
+---
+version: '3'
+services:
+
+    config-server:
+        container_name: config-server
+        image: "gnovoab/config-service"
+        ports:
+            - "8888:8888"
+
+    eureka-service:
+        container_name: discovery-service
+        image: "gnovoab/discovery-service"
+        ports:
+            - "8761:8761"
+
+
+    PostgreSQL:
+        container_name: postgres
+        image: postgres
+        volumes:
+            - db-data:/var/lib/postgresql/data
+        ports:
+            - 5432:5432
+        restart: always
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: postgres
+
+
+
+
+
+
+volumes:
+    db-data:
+        driver: local
+
+
+
+

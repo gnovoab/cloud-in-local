@@ -1,0 +1,25 @@
+---
+version: '3'
+services:
+
+
+    api-gateway:
+        container_name: api-gateway
+        image: "gnovoab/api-gateway:dev"
+        ports: 
+            - "7100:7100"
+        environment:
+            - "SPRING_PROFILES_ACTIVE=docker"
+            - "SPRING_CLOUD_CONFIG_URI=http://config-server:8888"
+
+    authorization-service:
+        container_name: authorization-service
+        image: "gnovoab/authorization-service:dev"
+        ports:
+            - "9999:9999"
+
+        environment:
+            - "SPRING_PROFILES_ACTIVE=docker"
+            - "SPRING_CLOUD_CONFIG_URI=http://config-server:8888"
+            - "SPRING_DATASOURCE_URL=jdbc:postgresql://PostgreSQL:5432/auth"
+
